@@ -1,0 +1,54 @@
+public class X {
+byte number = 1 ;
+void a () {
+	System.out.print ("output1 a, / ") ;
+}
+void b () {
+	System.out.print ("output2 b, " + (number + 17) + "/ ") ;
+}
+void c () {
+	System.out.print ("output3 c, / ") ;
+}
+}
+
+public class Y extends X {
+	void a () {
+System.out.print ("output4 a, / ") ;
+}
+}
+
+public class Z extends Y {
+	void c () {
+		System.out.print("output5 c, " + ((number + 26)/3) + "/ ") ;
+}
+}
+
+public class W extends X {
+byte number = 3 ;
+void d () {
+	System.out.print ("output6 d, " + ((18-number)/3) + "/ ") ;
+}
+}
+
+public class Training {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+X x = new X () ;
+Y y = new Y () ;
+Z z = new Z () ;
+W w = new W () ;
+
+w.d();
+w.b();
+x.c();
+y.a();
+y.b();
+z.a();
+z.c();
+}
+}
+
+The outputs are down below ;
+
+output6 d, 5/ output2 b, 18/ output3 c, / output4 a, / output2 b, 18/ output4 a, / output5 c, 9/ 
